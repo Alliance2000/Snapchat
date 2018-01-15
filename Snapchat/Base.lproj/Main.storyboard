@@ -153,11 +153,42 @@
                         <outlet property="descriptionTextField" destination="FUc-bf-5yY" id="e5j-Id-kLC"/>
                         <outlet property="imageView" destination="WBF-bC-a5a" id="7Hm-5o-nb7"/>
                         <outlet property="nextButton" destination="mr6-MD-VgI" id="rX7-Dw-vxG"/>
+                        <segue destination="ndl-oO-UNj" kind="show" identifier="selectusersegue" id="wSv-vx-32A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsW-FH-NOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2281" y="116"/>
+        </scene>
+        <!--Select User View Controller-->
+        <scene sceneID="ei9-GF-CyV">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ndl-oO-UNj" customClass="SelectUserViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X5X-vE-wiA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dUv-IL-bYN">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dUv-IL-bYN" firstAttribute="top" secondItem="2T4-DF-BZp" secondAttribute="top" id="5EH-Fo-aTn"/>
+                            <constraint firstItem="2T4-DF-BZp" firstAttribute="bottom" secondItem="dUv-IL-bYN" secondAttribute="bottom" id="OLt-At-KDa"/>
+                            <constraint firstItem="dUv-IL-bYN" firstAttribute="leading" secondItem="2T4-DF-BZp" secondAttribute="leading" id="UcY-cF-nAM"/>
+                            <constraint firstItem="2T4-DF-BZp" firstAttribute="trailing" secondItem="dUv-IL-bYN" secondAttribute="trailing" id="laV-Ly-cA3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2T4-DF-BZp"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="dUv-IL-bYN" id="Njy-BH-ehM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oy1-ds-BDx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3010" y="116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6VK-SC-qG1">

@@ -31,14 +31,14 @@ class SignInViewController: UIViewController {
                 print("##### we tried to sign in #####")
                 
                 if error != nil {
-                    print("##### we have an error: \(error!) #####")
+                    print("##### we have an error while signing in: \(error!) #####")
                     
                     Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!, completion:
                         { (user, error) in
                         print("##### we tried to create a new user #####")
                             
                         if error != nil {
-                            print("##### we have an error: \(error!) #####")
+                            print("##### we have an error creating a new user: \(error!) #####")
                         } else {
                             print("##### user created successfully #####")
                             self.performSegue(withIdentifier: "signinsegue", sender: nil)
