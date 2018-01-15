@@ -108,8 +108,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WBF-bC-a5a">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WBF-bC-a5a">
                                 <rect key="frame" x="67" y="84" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.77632504145716141" green="0.77632504145716141" blue="0.77632504145716141" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="3cw-L3-bl5"/>
                                     <constraint firstAttribute="height" constant="128" id="ifb-U8-tWC"/>
