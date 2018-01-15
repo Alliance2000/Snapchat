@@ -89,11 +89,74 @@
                                 <action selector="logoutTapped:" destination="0AO-Z0-u6l" id="lU3-7b-0U7"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="n4L-bO-QAZ">
+                            <connections>
+                                <segue destination="qO2-Jx-bcQ" kind="show" id="SvR-LV-zaw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="emF-yF-ffc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1562" y="117"/>
+        </scene>
+        <!--Picture View Controller-->
+        <scene sceneID="EOA-T9-93p">
+            <objects>
+                <viewController id="qO2-Jx-bcQ" customClass="PictureViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AXA-tA-U2x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WBF-bC-a5a">
+                                <rect key="frame" x="67" y="84" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="3cw-L3-bl5"/>
+                                    <constraint firstAttribute="height" constant="128" id="ifb-U8-tWC"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FUc-bf-5yY">
+                                <rect key="frame" x="67" y="232" width="240" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mr6-MD-VgI">
+                                <rect key="frame" x="171" y="282" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextTapped:" destination="qO2-Jx-bcQ" eventType="touchUpInside" id="Tvp-3n-TgT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FUc-bf-5yY" firstAttribute="top" secondItem="WBF-bC-a5a" secondAttribute="bottom" constant="20" id="1Li-0U-OEV"/>
+                            <constraint firstItem="FUc-bf-5yY" firstAttribute="width" secondItem="WBF-bC-a5a" secondAttribute="width" id="DPC-d3-JHp"/>
+                            <constraint firstItem="WBF-bC-a5a" firstAttribute="centerX" secondItem="AXA-tA-U2x" secondAttribute="centerX" id="DzN-1Q-NpG"/>
+                            <constraint firstItem="mr6-MD-VgI" firstAttribute="top" secondItem="FUc-bf-5yY" secondAttribute="bottom" constant="20" id="Mn3-lT-BHk"/>
+                            <constraint firstItem="WBF-bC-a5a" firstAttribute="top" secondItem="ihS-9v-wPC" secondAttribute="top" constant="20" id="WdI-Ru-b9m"/>
+                            <constraint firstItem="FUc-bf-5yY" firstAttribute="centerX" secondItem="AXA-tA-U2x" secondAttribute="centerX" id="ivJ-Ps-wp5"/>
+                            <constraint firstItem="mr6-MD-VgI" firstAttribute="centerX" secondItem="AXA-tA-U2x" secondAttribute="centerX" id="skO-xY-0TX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ihS-9v-wPC"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6Js-PN-df6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="xw7-iu-LAI">
+                            <connections>
+                                <action selector="cameraTapped:" destination="qO2-Jx-bcQ" id="ADE-kk-rWc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="FUc-bf-5yY" id="e5j-Id-kLC"/>
+                        <outlet property="imageView" destination="WBF-bC-a5a" id="7Hm-5o-nb7"/>
+                        <outlet property="nextButton" destination="mr6-MD-VgI" id="rX7-Dw-vxG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dsW-FH-NOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2281" y="116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6VK-SC-qG1">
