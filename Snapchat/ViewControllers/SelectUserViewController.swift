@@ -48,4 +48,12 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         return cell
     }
 
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let user = users[indexPath.row]
+       
+        let snap = ["from":user.email, "description":"hello", "imageURL":"www.image.com"]
+        Database.database().reference().child("users").child(user.uid).child("snaps").childByAutoId().setValue(snap)
+    }
+    
 }
