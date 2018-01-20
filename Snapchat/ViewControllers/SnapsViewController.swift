@@ -59,6 +59,7 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
             let snap = snaps[indexPath.row]
             cell.textLabel?.text = snap.from
+            tableView.allowsSelection = true
         }
         
         return cell
