@@ -30,6 +30,7 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         snap.from = snapshot.childSnapshot(forPath: "from").value as! String
         snap.descrip = snapshot.childSnapshot(forPath: "description").value as! String
         snap.key = snapshot.key
+        snap.uuid = snapshot.childSnapshot(forPath: "uuid").value as! String
 
         self.snaps.append(snap)
         self.tableView.reloadData()
