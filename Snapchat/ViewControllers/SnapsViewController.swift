@@ -29,9 +29,22 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         snap.imageURL = snapshot.childSnapshot(forPath: "imageURL").value as! String
         snap.from = snapshot.childSnapshot(forPath: "from").value as! String
         snap.descrip = snapshot.childSnapshot(forPath: "description").value as! String
+        snap.key = snapshot.key
 
         self.snaps.append(snap)
         self.tableView.reloadData()
+        })
+        
+        Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).child("snaps").observe(DataEventType.childRemoved, with: {(snapshot) in
+        
+            var index = 0
+            for snap in self.snaps {
+                if snap.key == snapshot.key {
+                    self.snaps.remove(at: index)
+                }
+                index += 1
+            }
+            self.tableView.reloadData()
         })
     }
 

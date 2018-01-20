@@ -8,6 +8,8 @@
 
 import UIKit
 import SDWebImage
+import FirebaseDatabase
+import FirebaseAuth
 
 
 class ViewSnapViewController: UIViewController {
@@ -26,6 +28,9 @@ class ViewSnapViewController: UIViewController {
         imageView.sd_setImage(with: URL(string: snap.imageURL), completed: nil)
     }
 
-
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).child("snaps").child(snap.key).removeValue()
+    }
 
 }
